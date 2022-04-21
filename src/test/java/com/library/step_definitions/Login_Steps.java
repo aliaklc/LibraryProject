@@ -14,25 +14,17 @@ public class Login_Steps {
     @Given("user goes to application as a student")
     public void user_goes_to_application_as_a_student() {
 
-
-        Driver.getDriver().get(ConfigurationReader.getValue("env"));
-
-        loginPage.inputEmail.sendKeys(ConfigurationReader.getValue("studentEmail27"));
-
-        loginPage.inputPassword.sendKeys(ConfigurationReader.getValue("studentPassword27"));
-
-        loginPage.submitLogin.sendKeys(Keys.ENTER);
-
+        loginPage.loginAsStudent();
     }
+
 
 
     @Given("user goes to application as a librarian")
     public void user_goes_to_application_as_a_librarian() {
 
-
+        loginPage.loginAsLibrarian();
 
     }
-
 
 
 }
